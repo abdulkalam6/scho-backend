@@ -16,7 +16,10 @@ app.use(cors({
     'http://localhost:3000',
     'http://localhost:5173',
     'https://scholario-mern-mern.vercel.app/' // REPLACE WITH YOUR ACTUAL FRONTEND DOMAIN
-  ]
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 app.use("/student", studentRoutes);
